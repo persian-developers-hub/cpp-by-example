@@ -10,12 +10,19 @@
  */
 
 #include <iostream>
+#include <httplib.h>
 
 using namespace std;
 
 int main()
 {
-    cout << "This is NOT the intended \"Hello World\"!\n";
+    httplib::Server server;
+
+    server.Get("/hello", [](const httplib::Request &req, httplib::Response &resp) {
+        resp.set_content("Hello World!", "text/plain");
+    });
+
+    server.listen("0.0.0.0", 8080);
 
     return 0;
 }

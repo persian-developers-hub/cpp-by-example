@@ -1,6 +1,9 @@
 # Build directory
 build
 
+# IDE Files
+.cache
+
 # Prerequisites
 *.d
 

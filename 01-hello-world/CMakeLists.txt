@@ -12,4 +12,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # =============================================================================
+include_directories(third_party/cpp-httplib)
+
+# =============================================================================
 add_subdirectory(src)
