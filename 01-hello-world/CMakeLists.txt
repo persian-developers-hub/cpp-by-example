@@ -11,7 +11,14 @@ project(hello-world VERSION 1.0.0
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
+# Look for dependencies
 # =============================================================================
+find_package(Boost REQUIRED COMPONENTS system container)
+
+# General Compiler Configuration
+# =============================================================================
+include_directories(third_party/boostjson)
 include_directories(third_party/cpp-httplib)
 
 # =============================================================================
